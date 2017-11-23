@@ -17,7 +17,7 @@ fun main(args: Array<String>) {
                         val articleRepository = ref<ArticleRepository>()
                         articleRepository.save(
                                 author = "Jack",
-                                title = "Kotlin + SpringBoot with JPA",
+                                title = "Spring Boot + Kotlin： 下一代 Java 服务端开发",
                                 url = "http://www.jianshu.com/p/3944fde5da90",
                                 content = """Kotlin + SpringBoot, Next J2EE Development ... """
                         )
