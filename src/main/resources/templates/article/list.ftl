@@ -1,10 +1,12 @@
 <#include '../common/header.ftl'>
 <#include '../common/nav.ftl'>
 
-<div class="container">
-
+<div class="banner">
     <h1> Kotlin + Spring Boot: Next J2EE Development 技术文章 </h1>
+</div>
 
+<div class="container">
+    <a class="btn-lg btn-primary pull-right" target="_blank" href="/view/article/add">写文章</a>
     <section>
         <article id="article"></article>
     </section>
@@ -34,7 +36,7 @@
 
             render: function () {
                 var list = getArticleList(this.state.articles)
-                return ( <ol>{list}</ol> )
+                return ( <ul>{list}</ul> )
             }
 
         })
@@ -49,8 +51,17 @@
 
             for (var i = 0; i < size; i++) {
                 var e = articles[i]
-                list.push(<li><h5>{e.author} 发表的文章 {e.gmtCreate}</h5></li>)
-                list.push(<h4><a href={e.url} target="_blank">{e.title}</a></h4>)
+
+                var detailUrl = "/view/article/" + e.id
+                list.push(
+                        <li>
+                            <h3><a href={detailUrl} target="_blank"> {e.title} </a></h3>
+                            <div className="text-info">
+                                <p>作者:{e.author} {e.gmtCreate}</p>
+                                源链接：<a href={e.url} target="_blank">{e.url}</a>
+                            </div>
+                        </li>
+                )
             }
             return list
         }

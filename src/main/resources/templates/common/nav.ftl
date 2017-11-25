@@ -1,12 +1,12 @@
 <nav class="navbar navbar-inverse" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Kotlin + Spring Boot</a>
+            <a class="navbar-brand" href="/">Kotlin + Spring Boot</a>
         </div>
         <div>
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Kotlin</a></li>
-                <li><a href="#">Spring Boot</a></li>
+                <li class="active"><a href="/">Kotlin</a></li>
+                <li><a href="/">Spring Boot</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         KSB <b class="caret"></b>
